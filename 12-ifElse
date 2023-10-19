@@ -1,0 +1,184 @@
+// 12 if/else
+
+/** 12-1
+ * Initialise the variable x to the value 10. Use a if statement to check if x is greater than 5. Console log the message to say the value is larger than 5 if
+true
+*/
+
+var x = 10;
+if (x > 5) {
+  console.log("The value is larger than 5")
+}
+
+/** 12-2
+ * Initialise the var x to the value 10. Use a statement to check if x is strictly equal to 10. Console log a messaging saying it is a match if true
+ */
+
+var x = 10;
+if (x === 10){
+  console.log("It is a match")
+}
+
+/** 12-3
+ * Initialise the var x to the value 10. Use a statement to check if x is greater than 5. This time make sure to eliminate the magic number 5 by making its own variable called
+ * VALIDATION. Console log the message to say The value is larger than _VALIDATION_. if it is true
+ */
+
+var x = 10;
+var VALIDATION = 5;
+if(x > VALIDATION){
+  console.log("The value is larger than " + VALIDATION + ".")
+}
+
+/** 12-4
+ * Initialise the variable guess to the value 2. Use a statement to check if guess is equal to 2 then have the message console log out you guessed (Guess)
+ * and you are right, else console log saying you guess wrong
+ */
+
+var guess = 2;
+if(guess == 2){
+  console.log("You guessed " + guess + " and you are right!")
+}else{
+  console.log("You are incorrect")
+}
+
+/** 12-5
+ * Initialise the variable guess to the value 5. Use a statement to check if guess is equal to 2 then have the message console log out you guessed (Guess)
+ * and you are right, else console log saying you guess wrong
+ */
+
+var guess = 5;
+if(guess == 2){
+  console.log("You guessed " + guess + " and you are right!")
+}else{
+  console.log("You are incorrect")
+}
+
+/** 12-6
+ * Create a variable called chosen value and use Math.random() to make a random number below 3 and greater or = to 0. Make sure to use math.floor
+ * to roound the random integer to the nearest whole number
+ * initialise a sentence to an empty string
+ * 
+ * Then check to see if the chosen value is 0. Console log the answer by assigning this sentence to This is the zero value.
+ * Then check to see if the chosen value is 1. Console log the answer by assigning this sentence to This is the one value.
+ * Then check to see if the chosen value is 2. Console log the answer by assigning this sentence to This is the second value.
+ * Else make the sentence say This is not a number between 0 and 2 inclusive
+ * console log out the sentence
+ */
+
+var chosenValue = Math.floor(Math.random() * (3));
+var sentencee = "";
+
+if(chosenValue == 0){
+  sentence = "This is the zero value"
+} else if(chosenValue == 1){
+  sentence = "This is the one value";
+}else if(chosenValue == 2){
+  sentence = "This is the two value";
+} else{
+  sentence = "This is not a number between 0 and 2 inclusive"
+}
+console.log(sentence);
+
+/** 12-7 
+ * Initialise the Variable date to the value of Date
+ * Then create another variable called hour and assign it to date.getHours().
+ * Create another variable called sentence and make it an empty string
+ * 
+ * Use an if statement to check if hours is less than 12. If it is then assign sentence to Good Morning
+ * use else to check if hour is less than 18. if it is then assign sentence to Good Afternoon
+ * use else if to check if hours is less than 24. If it is then assign sentence to Good Evening
+ * Else just assign sentence to Error in time
+ * 
+ * console log out the sentence at the bottom to display answer
+ */
+
+var date = new Date;
+var hour = date.getHours();
+var sentence = "";
+
+if(hour < 12){
+  sentence = "Good Morning";
+} else if(hour < 18){
+  sentence = "Good Afternoon";
+} else if(hour < 24){
+  sentence = "Good Evening";
+} else {
+  sentence = "Error in Time"
+}
+
+console.log(sentence);
+
+/** 12-8
+ * Intialise the variable guess one and give it the value 2
+ * Initialise another variable and call it guess two to the value 3
+ * If both numbers match then console log out the message
+ * Your First Guess is (2). Your second guess is (3) . you got it right
+ * else console log You guessed wrong 
+ */
+
+var guessOne = 2;
+var guessTwo = 3;
+
+if(guessOne == 2 && guessTwo == 3){
+  console.log("Your first guess is " + guessOne + ". Your second guess is " + guessTwo + ". You got it right.")
+} else {
+  console.log("You guessed WRONG")
+}
+
+/** 12-10
+ * Initialise one variable called guess one to the value of 2. 
+ * Then initialise another variable called guess two to the value Math.random. 
+ * Make sure to only allow numbers below 3 
+ * Also only accept whole number using math.floor
+ * initialise another variable called sentence to an empty string
+ * 
+ * Then use an if statement to see if guess one is equal to 2 AND NOT guess two equal to 1. If it is true then assign sentence to the message
+ * Your first guess is _. Your second guess is _. Your got it right. Console log
+ */
+
+var guessOne = 2;
+var guessTwo = Math.floor(Math.random()* (3));
+var sentence = "";
+
+if(guessOne == 2 && !(guessTwo == 1)){
+  sentence = "Your first guess is " + guessOne + ". Your second guess is " + guessTwo + ". You got it right."
+}else {
+  sentence = "You guessed wrong."
+}
+console.log(sentence);
+console.log(guessTwo);
+
+/** 12-11
+ * Initialise the values
+ * first name to steve
+ * age to 14
+ * country to canada
+ * message to an empty string
+ * 
+ * Create magic number and initialise
+ * MINIMUM AGE to the value 16
+ * LAW_IN_COUNTRY to Canada
+ * 
+ * Use an if statement to check if the age is above or equal to the minimum age AND is in the country law in country
+ * If it is then assign the message to say 
+ * You are able to get your licence 
+ * Else say that you are too young
+ * Console log
+ */
+
+var firstName = "Steve";
+var age = 14;
+var country = "Canada";
+var message = "";
+
+var MINIMUM_AGE = 16;
+var LAW_IN_COUNTRY = "Canada";
+
+if(age >= MINIMUM_AGE && LAW_IN_COUNTRY == country){
+  sentence = "You are able to get your licence"
+} else {
+  sentence = "You are too young."
+}
+
+console.log(sentence);
